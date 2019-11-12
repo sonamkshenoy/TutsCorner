@@ -1,0 +1,47 @@
+/* Style the header */
+.header {
+    padding: 40px;
+    text-align: center;
+    background: #48464d;
+    color: white;
+    height: 300px;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+    font-size: 40px;
+}
+
+.round-div {
+    border-radius: 40px;
+}
+
+  table {
+    border-collapse:separate;
+    border:solid black 2px;
+    border-radius:6px;
+    -moz-border-radius:8px;
+}
+
+td, th {
+    border-left:1px;
+    border-top: 1px;
+    text-align: center;
+    background-color: #e9e3d7;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 100px 10px 10px;
+}
+
+th {
+    border-top: none;
+    text-align: center;
+    background-color: #cccccc;
+    padding: 20px 20px 20px 20px;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
+table tr:hover td {
+  background-color: #ddd
+}

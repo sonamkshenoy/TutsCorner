@@ -1,0 +1,130 @@
+body {
+    background-color: white;
+  }
+  
+.parallax {
+  /* The image used */
+  padding: 20px;
+  background-image: url('education.jpg');
+
+  /* Set a specific height */
+  min-height: 290px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+form{
+  text-align: center;  }
+  
+.round-div {
+  border-radius: 40px;
+}
+
+
+table {
+  display: inline-block;
+  padding: 10px 50px 10px 40px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 20px;
+  background-color:rgb(238, 238, 238);
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.margin {
+  margin-left: 10px black;
+}
+
+textarea {
+  resize: none;
+}
+.rates {
+  border-radius: 100px;
+}
+
+.rates:hover {
+  width:60px;height:60px;
+  background-color: rgb(255, 208, 119);
+}
+
+
+h3 {
+  padding: 16px 18px 16px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  align-content: center;
+  position: relative;
+}
+
+.form {
+  background-color: #111;
+  color: azure;
+  margin-left: 0px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+
+.button{
+  border-color: rgb(140, 186, 255);
+  background-color: white;
+  font-size: 20px;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+  color: black;
+  box-shadow: 0 0 5px 5px  white inset, 0 0 0 0  rgb(140, 186, 255);
+  transition: all 250ms ease-in-out;
+}
+
+.button:hover {
+    box-shadow: 0 0 5px 0  rgb(198, 220, 253) inset, 0 0 5px 4px  rgb(198, 220, 253);
+    color: black;
+  }
+
+
+
+
+/* var t = [
+            [document.getElementById('q1'), document.getElementsByClassName('ques1')],
+            [document.getElementById('q2'), document.getElementsByClassName('ques2')],
+            [document.getElementById('q3'), document.getElementsByClassName('ques3')],
+            [document.getElementById('q4'), document.getElementsByClassName('ques4')],
+            [document.getElementById('q5'), document.getElementsByClassName('ques5')],
+            [document.getElementById('q6'), document.getElementsByClassName('ques6')]]
+
+        for(var j = 0;j<t.length;j++)
+        {
+            var t1 = t[j][1];
+            for(var k=0;k<t1.length;k++)
+            {
+                t1[k].addEventListener('click',function()
+                {
+                    var ele = t[j][0];
+                    ele.style.background = "rgb(129, 164, 230)";
+                    var s1 = t[j][1];
+                    for(var i=0;i<t1.length;i++)
+                    {
+                        s1[i].style.background = "white";
+                    }
+                    t1[k].style.background = "rgb(154, 181, 231)";
+                },false);
+            }
+        } */

@@ -1,0 +1,142 @@
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: black;
+  }
+  
+  .parallax {
+    /* The image used */
+    background-image: url('education.jpg');
+  
+    /* Set a specific height */
+    min-height: 290px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:contain;
+  }
+  form{
+    text-align: center;  }
+  table {
+
+    display: inline-block;
+    /* background-color: grey; 
+    padding: 50px 40px 20px 30px;  */
+  }
+  
+  .sidenav {
+    height: 100%;
+    /* width: 300px; */
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    /* padding-top: 30px; */
+    margin-left: 15px black;
+    margin-right: 115px black;
+    margin-top: 15px black;
+    margin-bottom: 15px black;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .line_img { 
+    /* display: inline; */
+  }
+  .rates:hover {
+    width:60px;height:60px;
+    border: solid 1px #555;
+    background-color: #eed;
+    box-shadow: 5px -5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 5px -5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 5px -5px rgba(0,0,0,0.6); 
+    -o-box-shadow: 5px -5px rgba(0,0,0,0.6);
+    border-radius:50px;
+  }
+
+  }
+  
+  .sidenav a {
+    padding: 10px 12px 10px 28px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+  }
+  .sidenav a.active {
+    display: block;
+    opacity: 1;
+}
+
+  .list-unstyled {
+    padding: 12px 14px 12px 23px;
+  }
+  
+  h3 {
+    padding: 16px 18px 16px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    align-content: center;
+    position: relative;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color: rgb(80, 78, 78);
+  }
+  
+  .form {
+    background-color: #111;
+    color: azure;
+    margin-left: s0px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+}
+
+.buttonns1{
+   display:inline-block;
+   padding:10px 10px;
+   border:0.1em solid #FFFFFF;
+   margin:0 0.3em 0.3em 0;
+   border-radius:0.12em;
+   box-sizing: border-box;
+   text-decoration:none;
+   font-family:'Roboto',sans-serif;
+   font-weight:250;
+  background-color: black;
+  font-size: 20px;
+   color:#FFFFFF;
+   text-align:center;
+   transition: all 0.2s;
+  }
+
+.buttonns1:hover{
+ color:#000000;
+ background-color:white;
+}
+
+@media all and (max-width:30em){
+ .buttonns1{
+  display:block;
+  margin:0.4em auto;
+ }
+}

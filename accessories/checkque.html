@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <p>You got so much knowledge from <input id='answer1' type="text" name="" value=""></p>
+    <p id="right1" style="display:none; color:#008000">You are right! Good going!</p>
+    <p id="wrong1" style="display:none; color:#ff0000">Oops! You are wrong. Please try again.</p>
+    <button id="question1" type="button" name="button">Submit</button>
+    <button type="button" name="button">See answer</button>
+
+
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $("#question1").on('click', function(e){
+        e.preventDefault();
+        $answer = $("#answer1").val();
+        console.log('check');
+        console.log($answer);
+        if($answer=="TutsCorner"){
+          console.log("Right");
+          $('#right1').show();
+          $('#wrong1').hide();
+        }
+        else{
+          $('#wrong1').show();
+          $('#right1').hide();
+        }
+      })
+    </script>
+  </body>
+</html>

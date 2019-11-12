@@ -1,0 +1,148 @@
+a {
+  text-decoration: none;
+}
+
+/* vertical align top */
+nav.vertical ul li {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 100;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Main styling part of the box */
+.info {
+  width: 45%;
+  margin: 3em auto;
+  background: #000;
+  background-size: cover;
+}
+
+.top {
+  padding: 3em;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  font-size: 0.9em;
+  color: #fff;
+  width: 94.5%;
+  display: block;
+  border: none;
+  padding: 0.8em;
+  border: solid 1px rgba(255, 255, 255, 0.37);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
+  font-family: 'Roboto', sans-serif;
+}
+
+input.email, input.text.w3lpass {
+  margin: 2em 0;
+}
+
+
+
+input[type="submit"] {
+  font-size: .9em;
+  background: #fff;
+  cursor: pointer;
+  padding: 0.9em;
+  width: 100%;
+  margin: 2em 0;
+  letter-spacing: 4px;
+}
+
+#loginbutton, #signupbutton {
+  font-size: .9em;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+  padding: 0.9em;
+  width: 30%;
+  margin: 2em 0;
+  letter-spacing: 4px;
+}
+
+input[type="submit"]:hover {
+  transition: .5s;
+  background: #000;
+  color:#fff;
+}
+
+.agileits-top p {
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.agileits-top p a {
+  color: #fff;
+  transition: .5s all;
+  font-weight: 400;
+}
+
+.agileits-top p a:hover {
+  color: #76b852;
+}
+
+/*-- //main --*/
+/*-- checkbox --*/
+.wthree-text label {
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 200;
+  cursor: pointer;
+  position: relative;
+}
+
+input.checkbox {
+  color: #fff;
+  padding-top: 10px;
+  background: #8DC26F;
+  cursor: pointer;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+input.checkbox:before {
+  content: "";
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  background: inherit;
+  cursor: pointer;
+}
+
+input.checkbox:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 1;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #fff;
+  transition: .4s ease-in-out;
+}
+
+input.checkbox:checked:after {
+  transform: rotate(-45deg);
+  height: .5rem;
+  border-color: #fff;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.anim input.checkbox:checked:after {
+  transform: rotate(-45deg);
+  height: .5rem;
+  border-color: transparent;
+  border-right-color: transparent;
+}
