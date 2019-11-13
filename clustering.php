@@ -28,7 +28,7 @@
 		<h4>We are going to use the famous iris data set for our KNN example. The dataset consists of four attributes: sepal-width, sepal-length, petal-width and petal-length. These are the attributes of specific types of iris plant. The task is to predict the class to which these plants belong. There are three classes in the dataset: Iris-setosa, Iris-versicolor and Iris-virginica.</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 1</h1>
         </div>
@@ -37,7 +37,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -60,7 +60,7 @@
 		<h4> To preprocess split our dataset into its attributes and labels. The X variable contains the first four columns of the dataset (i.e. attributes) while y contains the labels.</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 2</h1>
         </div>
@@ -69,7 +69,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <img src = "images/tableknn-image.jpg" align="center" alt="data image"><br><br>
@@ -95,7 +95,7 @@
 		<h4>The above script splits the dataset into 80% train data and 20% test data. This means that out of total 150 records, the training set will contain 120 records and the test set contains 30 of those records.</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 3</h1>
         </div>
@@ -104,7 +104,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -125,7 +125,7 @@
 		<h4>Since the range of values of raw data varies widely, in some machine learning algorithms, objective functions will not work properly without normalization. For example, the majority of classifiers calculate the distance between two points by the Euclidean distance. If one of the features has a broad range of values, the distance will be governed by this particular feature. Therefore, the range of all features should be normalized so that each feature contributes approximately proportionately to the final distance.</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 4</h1>
         </div>
@@ -134,7 +134,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -158,7 +158,7 @@
 		<h4>For evaluating an algorithm, confusion matrix, precision, recall and f1 score are the most commonly used metrics. The confusion_matrix and classification_report methods of the sklearn.metrics can be used to calculate these metrics.</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 5</h1>
         </div>
@@ -167,7 +167,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -194,16 +194,19 @@
 		<h4>From the output we can see that the mean error is zero when the value of the K is between 5 and 18. I would advise you to play around with the value of K to see how it impacts the accuracy of the predictions.</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Box 6</h1>
-        </div>
-        <div class="panel-footer">
-          <h3>Measure</h3>
-          <h4>Look where you stand out against your peers</h4>
-          <button class="btn btn-lg">Get started</button>
-        </div>
+    <div class="panel panel-default text-center">
+      <div class="panel-heading">
+        <h1>Clustering</h1>
       </div>
+      <div class="panel-footer">
+        <h3>Question 1</h3>
+        <p>KNN is <input style= "color:black; text-decoration: underline; border:#000;" id='answer1'class="panel-footer" type="text" name="" value=""> algorithm and therefore requires no training prior to making real time predictions.</p>
+        <p id="right1" style="display:none; color:#008000">You are right! Good going!</p>
+        <p id="wrong1" style="display:none; color:#ff0000">Oops! You are wrong. Please try again.</p>
+        <button class="btn btn-lg" id="question1" type="button" name="button">Submit</button>
+        <!-- <button class="btn btn-lg" type="button" name="button">See answer</button> -->
+      </div>
+    </div>
     </div>
   </div>
 </div>
@@ -284,7 +287,7 @@
         <div class="panel-footer">
           <h3>Learn</h3>
           <h4>Learn about differnet algorithms in ML</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="regression.php">Go back to data processing!</a></button>
         </div>
       </div>
     </div>
@@ -296,7 +299,7 @@
         <div class="panel-footer">
           <h3>Evaluate</h3>
           <h4>Understand how well you know your concepts</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="Clustering_Quiz.html">Take quiz!</a></button>
         </div>
       </div>
     </div>
@@ -308,12 +311,32 @@
         <div class="panel-footer">
           <h3>Measure</h3>
           <h4>Look where you stand out against your peers</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="Scoreboard.php">Scoreboard</a></button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+<script type="text/javascript">
+  $("#question1").on('click', function(e){
+    e.preventDefault();
+    $answer = $("#answer1").val();
+    console.log('check');
+    console.log($answer);
+    if($answer=="lazy learning"){
+      console.log("Right");
+      $('#right1').show();
+      $('#wrong1').hide();
+    }
+    else{
+      $('#wrong1').show();
+      $('#right1').hide();
+    }
+  })
+</script>
 
 <script>
 $(document).ready(function(){

@@ -63,11 +63,11 @@
             <tr>
               <td colspan="2">
               <div class="line_img">
-                <img class="rates" id="emo1" onclick="highlight1()" width="60px" height="60px" src="C:\Users\Kavya S\Documents\Webtech_Project\Emojis\Grin.png">
-                <img class="rates" id="emo2" onclick="highlight2()" width="60px" height="60px" src="C:\Users\Kavya S\Documents\Webtech_Project\Emojis\Smiley.png">
-                <img class="rates" id="emo3" onclick="highlight3()" width="60px" height="60px" src="C:\Users\Kavya S\Documents\Webtech_Project\Emojis\Neutral.png">
-                <img class="rates" id="emo4" onclick="highlight4()" width="60px" height="60px" src="C:\Users\Kavya S\Documents\Webtech_Project\Emojis\Dissapointed.png">
-                <img class="rates" id="emo5" onclick="highlight5()" width="60px" height="60px" src="C:\Users\Kavya S\Documents\Webtech_Project\Emojis\Angry.png">
+                <img class="rates" id="emo1" onclick="highlight1()" width="60px" height="60px" src="images/Grin.png">
+                <img class="rates" id="emo2" onclick="highlight2()" width="60px" height="60px" src="images/Smiley.png">
+                <img class="rates" id="emo3" onclick="highlight3()" width="60px" height="60px" src="images/Neutral.png">
+                <img class="rates" id="emo4" onclick="highlight4()" width="60px" height="60px" src="images/Dissappointed.png">
+                <img class="rates" id="emo5" onclick="highlight5()" width="60px" height="60px" src="images/Angry.png">
 
               </div>
             </td>

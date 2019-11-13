@@ -45,7 +45,7 @@
       <div class="slideanim">
         <div class="col-sm-4 col-xs-12">
           <div class="panel panel-default text-center" style="margin-bottom:100px;">
-            <div class="panel-heading">
+            <div style="height:160px;" class="panel-heading">
               <h1>Quiz taken by</h1>
             </div>
             <div class="panel-footer">

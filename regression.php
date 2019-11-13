@@ -29,7 +29,7 @@
 		Now we need to find the regression line(a line which fits best in the above scatter plot so that we can predict the response y(ie. cost of the house) for any new values of x(ie. size of the house).</h4>
     </div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 1</h1>
         </div>
@@ -38,7 +38,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <img src = "images/dataset-image.png" align="center" alt="dataset image"><br><br>
@@ -60,7 +60,7 @@
 		<h4>Here we have used “numpy as np” and “matplotlib.pyplot as plt” it is done to rename the huge names to something smaller(ease of ). </h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 2</h1>
         </div>
@@ -69,7 +69,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -89,7 +89,7 @@
 		</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 3</h1>
         </div>
@@ -98,7 +98,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -137,16 +137,19 @@
 		</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Box 4</h1>
-        </div>
-        <div class="panel-footer">
-          <h3>Measure</h3>
-          <h4>Look where you stand out against your peers</h4>
-          <button class="btn btn-lg">Get started</button>
-        </div>
+    <div class="panel panel-default text-center">
+      <div class="panel-heading">
+        <h1>Classification</h1>
       </div>
+      <div class="panel-footer">
+        <h3>Question 1</h3>
+        <input style= "color:black; text-decoration: underline; border:#000;" id='answer1'class="panel-footer" type="text" name="" value=""><p> short form as np.array() </p>
+        <p id="right1" style="display:none; color:#008000">You are right! Good going!</p>
+        <p id="wrong1" style="display:none; color:#ff0000">Oops! You are wrong. Please try again.</p>
+        <button class="btn btn-lg" id="question1" type="button" name="button">Submit</button>
+        <!-- <button class="btn btn-lg" type="button" name="button">See answer</button> -->
+      </div>
+    </div>
     </div>
   </div>
 </div>
@@ -254,7 +257,7 @@
         <div class="panel-footer">
           <h3>Learn</h3>
           <h4>Learn about differnet algorithms in ML</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="classification.php">Go to Classification!</a></button>
         </div>
       </div>
     </div>
@@ -266,7 +269,7 @@
         <div class="panel-footer">
           <h3>Evaluate</h3>
           <h4>Understand how well you know your concepts</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="Classification_Quiz.html">Take quiz!</a></button>
         </div>
       </div>
     </div>
@@ -278,12 +281,34 @@
         <div class="panel-footer">
           <h3>Measure</h3>
           <h4>Look where you stand out against your peers</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="Scoreboard.php">Scoreboard</a></button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+<script type="text/javascript">
+  $("#question1").on('click', function(e){
+    e.preventDefault();
+    $answer = $("#answer1").val();
+    console.log('check');
+    console.log($answer);
+    if($answer=="numpy.array()"){
+      console.log("Right");
+      $('#right1').show();
+      $('#wrong1').hide();
+    }
+    else{
+      $('#wrong1').show();
+      $('#right1').hide();
+    }
+  })
+</script>
+
 
 <script>
 $(document).ready(function(){

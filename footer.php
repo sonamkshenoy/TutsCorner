@@ -1,13 +1,13 @@
 
 
-      <a href="#navbarNavAltMarkup"><button id="upArrowButton" type="button" name="button"> <img id="upArrowImg" src="images/uparrow.png" alt=""> </button></a>
+      <!-- <a href="#navbarNavAltMarkup"><button id="upArrowButton" type="button" name="button"> <img id="upArrowImg" src="images/uparrow.png" alt=""> </button></a> -->
     </div>
 
 
 
 
     <div class="footer">
-      <h2>Footer - contact info</h2>
+      <h2>----- TutsCorner -----</h2>
     </div>
 
 

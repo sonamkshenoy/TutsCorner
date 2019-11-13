@@ -36,12 +36,15 @@
 	<div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Box 1</h1>
+          <h1>Classification</h1>
         </div>
         <div class="panel-footer">
-          <h3>Measure</h3>
-          <h4>Look where you stand out against your peers</h4>
-          <button class="btn btn-lg">Get started</button>
+          <h3>Question 1</h3>
+          <input style= "color:black; text-decoration: underline; border:#000;" id='answer1'class="panel-footer" type="text" name="" value=""><p> is a python library that can be used for machine learning models. </p>
+          <p id="right1" style="display:none; color:#008000">You are right! Good going!</p>
+          <p id="wrong1" style="display:none; color:#ff0000">Oops! You are wrong. Please try again.</p>
+          <button class="btn btn-lg" id="question1" type="button" name="button">Submit</button>
+          <!-- <button class="btn btn-lg" type="button" name="button">See answer</button> -->
         </div>
       </div>
     </div>
@@ -67,16 +70,19 @@
 		<h4>The code below reads the data into a Pandas data frame, and then separates the data frame into a y vector of the response and an X matrix of explanatory variables</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Box 2</h1>
-        </div>
-        <div class="panel-footer">
-          <h3>Measure</h3>
-          <h4>Look where you stand out against your peers</h4>
-          <button class="btn btn-lg">Get started</button>
-        </div>
+    <div class="panel panel-default text-center">
+      <div class="panel-heading">
+        <h1>Classification</h1>
       </div>
+      <div class="panel-footer">
+        <h3>Question 2</h3>
+        <input style= "color:black; text-decoration: underline; border:#000;" id='answer2'class="panel-footer" type="text" name="" value=""><p>  is where we wish to group an outcome into one of two groups. </p>
+        <p id="right2" style="display:none; color:#008000">You are right! Good going!</p>
+        <p id="wrong2" style="display:none; color:#ff0000">Oops! You are wrong. Please try again.</p>
+        <button class="btn btn-lg" id="question2" type="button" name="button">Submit</button>
+        <!-- <button class="btn btn-lg" type="button" name="button">See answer</button> -->
+      </div>
+    </div>
     </div>
   </div>
 </div>
@@ -102,7 +108,7 @@
 		<h4>We can then use the predict method to predict probabilities of new data, as well as the score method to get the mean prediction accuracy.</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 3</h1>
         </div>
@@ -111,7 +117,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -143,7 +149,7 @@
 		<h4>We use sklearn for consistency in this post, however libraries such as Tensorflow and Keras are more suited to fitting and customizing neural networks, of which there are a few varieties used for different purposes.</h4>
 	</div>
 	<div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
+      <!-- <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Box 4</h1>
         </div>
@@ -152,7 +158,7 @@
           <h4>Look where you stand out against your peers</h4>
           <button class="btn btn-lg">Get started</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -227,7 +233,7 @@
         <div class="panel-footer">
           <h3>Learn</h3>
           <h4>Learn about differnet algorithms in ML</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="clustering.php">Go to Clustering!</a></button>
         </div>
       </div>
     </div>
@@ -239,7 +245,7 @@
         <div class="panel-footer">
           <h3>Evaluate</h3>
           <h4>Understand how well you know your concepts</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="Clustering_Quiz.html">Take quiz!</a></button>
         </div>
       </div>
     </div>
@@ -251,12 +257,53 @@
         <div class="panel-footer">
           <h3>Measure</h3>
           <h4>Look where you stand out against your peers</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="Scoreboard.php">Scoreboard</a></button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $("#question1").on('click', function(e){
+    e.preventDefault();
+    $answer = $("#answer1").val();
+    console.log('check');
+    console.log($answer);
+    if($answer=="Scikit-learn"){
+      console.log("Right");
+      $('#right1').show();
+      $('#wrong1').hide();
+    }
+    else{
+      $('#wrong1').show();
+      $('#right1').hide();
+    }
+  })
+</script>
+
+<script type="text/javascript">
+  $("#question2").on('click', function(e){
+    e.preventDefault();
+    $answer = $("#answer2").val();
+    console.log('check');
+    console.log($answer);
+    if($answer=="Binary Classification"){
+      console.log("Right");
+      $('#right2').show();
+      $('#wrong2').hide();
+    }
+    else{
+      $('#wrong2').show();
+      $('#right2').hide();
+    }
+  })
+</script>
 
 <script>
 $(document).ready(function(){

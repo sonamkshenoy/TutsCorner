@@ -7,7 +7,7 @@
       <h2>Machine Learning</h2><br>
       <h4>Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves</h4><br>
       <!-- <p>It is the field of study that gives computers the capability to learn without being explicitly programmed. ML is one of the most exciting technologies that one would have ever come across. As it is evident from the name, it gives the computer that which makes it more similar to humans: The ability to learn. Machine learning is actively being used today, perhaps in many more places than one would expect.</p> -->
-      <br><button class="btn btn-default btn-lg">Get Started</button>
+      <!-- <br><button class="btn btn-default btn-lg">Get Started</button> -->
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo slideanim"></span>
@@ -117,7 +117,7 @@
         <div class="panel-footer">
           <h3>Learn</h3>
           <h4>Learn about differnet algorithms in ML</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="regression.php">Go to Regression!</a></button>
         </div>
       </div>
     </div>
@@ -129,7 +129,7 @@
         <div class="panel-footer">
           <h3>Evaluate</h3>
           <h4>Understand how well you know your concepts</h4>
-          <button class="btn btn-lg"><a href="Classification_Quiz.html">Get started</a></button>
+          <button class="btn btn-lg"><a href="Classification_Quiz.html">Take quiz!</a></button>
         </div>
       </div>
     </div>
@@ -141,7 +141,7 @@
         <div class="panel-footer">
           <h3>Measure</h3>
           <h4>Look where you stand out against your peers</h4>
-          <button class="btn btn-lg">Get started</button>
+          <button class="btn btn-lg"><a href="Scoreboard.php">Scoreboard</a></button>
         </div>
       </div>
     </div>
