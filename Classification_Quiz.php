@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,18 +7,30 @@
     <link rel="stylesheet" href="styles/quiz.css">
 </head>
 
+<?php
+
+if(isset($_POST['submit'])){
+  echo $_POST['question1'];
+}
+
+?>
+
 <body style="font-family: Calibri">
 
-    <div class="header" style="padding: 40px; margin-bottom: 20px; text-align:center; background:#48464d; color:white">
+  <div class="header" style="padding: 40px; margin-bottom: 20px; text-align:center; background:#48464d; color:white">
+
         <h1 style="font-size: 40px">Classification</h1>
         <!-- <p>Just the right place to get started for Machine Learning!</p> -->
         <!-- <br> -->
         <h2 style="align-items: center">
-            <div class = "round-div" style="display: inline-block; background-color: white; color: black ; width: 300px; padding: 10px 10px 10px 10px">Quiz Time</div>
+          Quiz Time
         </h2>
-    </div>
+      </div>
 
-    <div class="question" style="width: 65%; height:100%; float: left; margin-left: 60px;">
+
+<!-- <form class="" action="/tutscorner/Classification_Quiz.php" method="POST"> -->
+
+    <!-- <div class="question" style="width: 65%; height:100%; float: left; margin-left: 60px;"> -->
         <table>
 
             <!-- Question 1 -->
@@ -33,7 +46,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><button style="margin-bottom: 50px;" class="option ques1">Both of the above</button> </td>
+                <td><button style="margin-bottom: 50px;"  class="option ques1">Both of the above</button> </td>
                 <td><button style="margin-bottom: 50px;" class="option ques1">None of the above</button></td>
             </tr>
 
@@ -196,9 +209,11 @@
                     </tr>
 
         </table>
-        <div style="padding-left: 380px; margin-bottom: 40px;"> <button class="submit_button"> Submit </button>
+        <div style="padding-left: 380px; margin-bottom: 40px;"> <button id="submit_button">Submit</button></div>
 
-    </div>
+  <!-- </form> -->
+
+
 
     <!-- Side Scoreboard -->
     <div class="fixit" style=" float: right; align-items: center; margin-top: 40px; position: fixed">
@@ -236,5 +251,6 @@
     </div>    </div>
 </div>
     <script src="quiz.js"></script>
-</body>
-</html>
+
+
+<?php include('footer.php') ?>

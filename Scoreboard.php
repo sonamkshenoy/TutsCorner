@@ -1,4 +1,17 @@
-<?php include("header.php") ?>
+<?php include("header.php");
+
+  include("config/db_connect.php");
+
+  $sql = "SELECT name, quiz1score, quiz2score FROM allentries ORDER BY quiz1score+quiz2score DESC";
+  // Dont make syntax errors in sql query, e.g. adding extra comma, double quotes etc.
+  $result = mysqli_query($conn,$sql);
+  $students = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_free_result($result);
+  mysqli_close($conn);
+  // print_r($students);
+  $rank=1;
+
+?>
 
     <div class="container">
       <div class="row">
@@ -13,31 +26,13 @@
                   <th> Name </th>
                   <th> Score </th>
                 </tr>
-                <tr>
-                  <td>1.</td>
-                  <td> Jenson </td>
-                  <td> 20 </td>
-                </tr>
-                <tr>
-                  <td>2.</td>
-                  <td>Flynn</td>
-                  <td> 17</td>
-                </tr>
-                <tr>
-                  <td>3.</td>
-                  <td> Walker</td>
-                  <td> 12</td>
-                </tr>
-                <tr>
-                  <td>4.</td>
-                  <td>Ashley</td>
-                  <td>9</td>
-                </tr>
-                <tr>
-                  <td>5.</td>
-                  <td>Justin</td>
-                  <td>3</td>
-                </tr>
+                <?php foreach ($students as $student) { ?>
+                  <tr>
+                    <td><?php echo $rank ?>.</td>
+                    <td> <?php echo $student['name']; ?> </td>
+                    <td> <?php echo $student['quiz1score']+$student['quiz2score']; ?> </td>
+                  </tr>
+                <?php $rank=$rank+1; } ?>
                 </table>
               </div>
         </div>
@@ -73,7 +68,7 @@
               [
                 { label: "Ashley", y: 9 },
                 { label: "Flynn", y: 17 },
-                { label: "Jenson", y: 20 },
+                { label: "<?php echo $students[0]['name'];  ?>", y: <?php echo $students[0]['quiz1score']+$students[0]['quiz2score']; ?> },
                 { label: "Walker", y: 12 },
                 { label: "Justin", y: 3 }
 

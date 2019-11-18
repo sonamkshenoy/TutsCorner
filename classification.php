@@ -245,7 +245,7 @@
         <div class="panel-footer">
           <h3>Evaluate</h3>
           <h4>Understand how well you know your concepts</h4>
-          <button class="btn btn-lg"><a href="Clustering_Quiz.html">Take quiz!</a></button>
+          <button class="btn btn-lg"><a href="Clustering_Quiz.php">Take quiz!</a></button>
         </div>
       </div>
     </div>
