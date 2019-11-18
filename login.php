@@ -1,24 +1,35 @@
-<?php include("header.php");
+<?php
 include("config/db_connect.php");
 
 if(isset($_POST['login'])){
   // echo $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
-  $sql = "SELECT email,password FROM allentries WHERE email='$email'";
+  $sql = "SELECT name,email,password FROM allentries WHERE email='$email'";
 
   $result = mysqli_query($conn,$sql);
   $students = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_free_result($result);
   mysqli_close($conn);
   if($password == $students[0]['password']){
-    echo 'Login successful! Congrats!';
-    
+    // echo 'Login successful! Congrats!';
+    session_start();
+
+    // Givers error : session_start(): Cannot send session cookie - headers already sent by
+     // ANY HTML before things that send headers (like cookies). The <?php tag must be the first thing in the file. Not even whitespace before it.
+     // Add the include php statement of html after setting cookie and the include of config before that since you want to use conn of connection with the DB.
+    $_SESSION['name']=$students[0]['name'];
   }
   else{
     echo 'Login unsuccessful. Please enter correct credentials';
   }
 }
+
+include("header.php");
+
+
+
+
 
 if(isset($_POST['signup'])){
   // echo $_POST['username'];
