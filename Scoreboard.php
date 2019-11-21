@@ -1,6 +1,17 @@
 <?php include("header.php");
+// session_start();
+$name = $_SESSION['name']??"guest";
+
 
   include("config/db_connect.php");
+  $quiz1scorevalue = rand(1,10)??8;
+  $sql = "UPDATE allentries SET quiz1score='$quiz1scorevalue' WHERE name='$name'";
+  if(mysqli_query($conn, $sql)){
+    // echo "Hey $name! You have signed up successfully!";
+  }
+  else{
+    echo "Please try again!". mysqli_error($conn);
+  }
 
   $sql = "SELECT name, quiz1score, quiz2score FROM allentries ORDER BY quiz1score+quiz2score DESC";
   // Dont make syntax errors in sql query, e.g. adding extra comma, double quotes etc.
@@ -18,6 +29,7 @@
         <div class="col--md--6">
           <div id="chartContainer" style="margin: 30px;float:left; height: 350px; width: 350px;"></div>
         </div>
+        <h3><?php if(isset($_SESSION['name'])){echo 'You scored: '.$quiz1scorevalue;} ?></h3>
         <div class="col--md--6">
           <div id="table" style="margin: 70px 30px 0px 280px; float: right">
               <table class="roundedTable" style="align-items: center;">
@@ -81,5 +93,3 @@
         </script>
 
       <script>
-
-      <?php include("footer.php") ?>

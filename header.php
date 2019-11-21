@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $name = $_SESSION['name']??"guest";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,10 +50,7 @@
       <a href="regression.php">Regression</a>
       <a href="classification.php">Classification</a>
       <a href="clustering.php">Clustering</a>
-      <?php
-        // session_start();
-        $name = $_SESSION['name'];
-      ?>
+
       <a href="#" class="right">Hey <?php echo $name; ?>!</a>
       <a href="login.php" class="right">Login</a>
       <a href="aboutPage.php" class="right">About</a>

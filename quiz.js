@@ -301,17 +301,30 @@ function q10(e)
     this.style.background = "rgb(154, 181, 231)";
 }
 
-$('#submit_button').on('click',function(){
-  <? php ?>
-  // $.ajax({
-  //   type:'POST',
-  //   url:'/Scoreboard.php',
-  //   data:score,
-  //   success:function(orders){
-  //     console.log('Done');
-  //   },
-  //   error:function(){
-  //     console.log('error');
-  //   }
+$('#submit_button').on('click',function(e){
+  e.preventDefault();
+  $('.scorenow').show();
+  $('#scorehere').html(score);
+  // $.get('/tutscorner/Scoreboard.php/?score='+score,function(){
+    // window.location.href = "/tutscorener/Classification_Quiz/?score="+score;
   // });
+  // $.post('/tutscorner/Scoreboard.php/',score,function(){
+  //   console.log('post successful', score);
+  // });
+
+   $.ajax({
+    type: "POST",
+    url: '/tutscorner/Classification_Quiz.php',
+    data: {score: score},
+
+    success: function (data) {
+                  console.log(parseInt(data));
+                  // if( !('error' in obj) ) {
+                  //     yourVariable = obj.result;
+                  // }
+                  // else {
+                  //     console.log(obj.error);
+                  // }
+            }
+    });
 });

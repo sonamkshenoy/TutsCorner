@@ -1,3 +1,27 @@
+<?php
+session_start();
+$name = $_SESSION['name']??"guest";
+include("config/db_connect.php");
+
+
+if(isset($_POST['score'])){
+
+  $score = $_POST['score'];
+
+   // $quiz1scorevalue = rand(1,10)??8;
+   $sql = "UPDATE allentries SET quiz1score='$score' WHERE name='$name'";
+   if(mysqli_query($conn, $sql)){
+     // echo "Hey $name! You have signed up successfully!";
+   }
+   else{
+     // echo "Please try again!". mysqli_error($conn);
+   }
+   echo $_POST['score'];
+}
+
+
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -5,15 +29,13 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles/quiz.css">
+    <script
+    			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+    			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    			  crossorigin="anonymous"></script>
 </head>
 
-<?php
 
-if(isset($_POST['submit'])){
-  echo $_POST['question1'];
-}
-
-?>
 
 <body style="font-family: Calibri">
 
@@ -209,10 +231,19 @@ if(isset($_POST['submit'])){
                     </tr>
 
         </table>
-        <div style="padding-left: 380px; margin-bottom: 40px;"> <button id="submit_button">Submit</button></div>
+        <!-- <form class="" action="/Scoreboard.php" method="post"> -->
+        <!-- <form class="" action="index.html" method="post">
+          <input id="score" type="text" name="" value="">
+        </form> -->
+          <a href="/tutscorner/Scoreboard.php"><div style="padding-left: 380px; margin-bottom: 40px;"> <button id="submit_button">Submit</button></div></a>
+
+        <!-- </form> -->
 
   <!-- </form> -->
+  <div class="scorenow" style = "text-align:center; display:none;">
+    <h2>You scored <span id='scorehere'></span> </h2>
 
+  </div>
 
 
     <!-- Side Scoreboard -->
@@ -248,9 +279,17 @@ if(isset($_POST['submit'])){
                 <td><a href="#Question10"><button class="qno" id="q10">10</button></a></td>
             </tr>
         </table>
-    </div>    </div>
+    </div>
+   </div>
 </div>
+
+
     <script src="quiz.js"></script>
+    <!-- <script type="text/javascript">
+    // document.cookie = "score = " + score;
+    // var score= 9;
+    score = score;
+  </script>-->
 
-
-<?php include('footer.php') ?>
+</body>
+</html>
