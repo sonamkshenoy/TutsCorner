@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION))
+  {
+      session_start();
+  }
 $name = $_SESSION['name']??"guest";
 include("config/db_connect.php");
 

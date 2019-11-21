@@ -17,19 +17,21 @@ if(isset($_POST['login'])){
   $students = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_free_result($result);
   mysqli_close($conn);
-  if($password == $students[0]['password']){
-    // echo 'Login successful! Congrats!';
-    session_start();
-
-    // Givers error : session_start(): Cannot send session cookie - headers already sent by
-     // ANY HTML before things that send headers (like cookies). The <?php tag must be the first thing in the file. Not even whitespace before it.
-     // Add the include php statement of html after setting cookie and the include of config before that since you want to use conn of connection with the DB.
-    $_SESSION['name']=$students[0]['name'];
-    header("Location: /TutsCorner/");
+  if($students){
+    if($password == $students[0]['password']){
+      // echo 'Login successful! Congrats!';
+      // Givers error : session_start(): Cannot send session cookie - headers already sent by
+       // ANY HTML before things that send headers (like cookies). The <?php tag must be the first thing in the file. Not even whitespace before it.
+       // Add the include php statement of html after setting cookie and the include of config before that since you want to use conn of connection with the DB.
+        $_SESSION['name']=$students[0]['name'];
+        header("Location: /TutsCorner/");
+      }
+    else{
+      echo 'Login unsuccessful. Please enter correct credentials';
+    }
   }
-  else{
-    echo 'Login unsuccessful. Please enter correct credentials';
-  }
+  else
+  echo 'Login unsuccessful. Please enter correct credentials';
 }
 
 include("header.php");
