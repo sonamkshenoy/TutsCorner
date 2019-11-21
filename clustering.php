@@ -299,7 +299,7 @@
         <div class="panel-footer">
           <h3>Evaluate</h3>
           <h4>Understand how well you know your concepts</h4>
-          <?php if(isset($_SESSION['name'])){echo '<button class="btn btn-lg"><a href="Classification_Quiz.php">Take quiz!</a></button>';}
+          <?php if(isset($_SESSION['name'])){echo '<button class="btn btn-lg"><a href="Clustering_Quiz.php">Take quiz!</a></button>';}
           else{echo "<button class='btn btn-lg'>Please ".'<a href="/tutscorner/login.php">'.'login'.'</a>'." to take the quiz.</button>";} ?>
         </div>
       </div>

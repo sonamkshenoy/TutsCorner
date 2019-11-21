@@ -3,14 +3,14 @@
 score=0;
 var added1, ques1=0;
 var added2, ques2=0;
-var added3;
-var added4;
-var added5;
-var added6;
-var added7;
-var added8;
-var added9;
-var added10;
+var added3; ques3 = 0;
+var added4; ques4 = 0;
+var added5; ques5 = 0;
+var added6; ques6 = 0;
+var added7; ques7 = 0;
+var added8; ques8 = 0;
+var added9; ques9 = 0;
+var added10; ques10 = 0;
 var t1 = document.getElementsByClassName('ques1');
 for(var i=0;i<t1.length;i++)
 {
@@ -19,19 +19,20 @@ for(var i=0;i<t1.length;i++)
 function q1(e)
 {
     console.log($(this).html());
-    if($(this).html()=="Both of the above"){
-      ques1=1;
+    if($(this).html()=="True"){ //Line 2
+      ques1=1; //Line 3
       score=score+1;
       added1=true;
       console.log(score);
     }
     else{
-      if(added1){
-      ques1=0;
+      if(added1){ //Line 4
+      ques1=0; //Line 5
       score=score-1;
       added1=false;
-      console.log(score);
       }
+      console.log(score);
+
     }
     var ele = document.getElementById("q1");
     ele.style.background = "rgb(129, 164, 230)";
@@ -51,7 +52,7 @@ for(var i=0;i<t2.length;i++)
 }
 function q2(e)
 {
-  if($(this).html()=="False"){
+  if($(this).html()=="One"){
     ques2=1;
     score=score+1;
     added2=true;
@@ -83,15 +84,17 @@ for(var i=0;i<t3.length;i++)
 }
 function q3(e)
 {
-  if($(this).html()=="Logit"){
+  if($(this).html()=="No"){
+    ques3=1;
     score=score+1;
     added3=true;
     console.log(score);
   }
   else{
-    if(added3)
+    if(added3){
+    ques3=0;
     score=score-1;
-    added3=false;
+    added3=false;}
     console.log(score);
   }
     var ele = document.getElementById("q3");
@@ -112,15 +115,17 @@ for(var i=0;i<t4.length;i++)
 }
 function q4(e)
 {
-  if($(this).html()=="None of the above"){
+  if($(this).html()=="Yes"){
+    ques4=1;
     score=score+1;
     added4=true;
     console.log(score);
   }
   else{
-    if(added4)
+    if(added4){
+    ques4=0;
     score=score-1;
-    added4=false;
+    added4=false;}
     console.log(score);
   }
     var ele = document.getElementById("q4");
@@ -141,15 +146,17 @@ for(var i=0;i<t5.length;i++)
 }
 function q5(e)
 {
-  if($(this).html()=="Both of the above"){
+  if($(this).html()=="K-means clustering algorithm"){
+    ques5=1;
     score=score+1;
     added5=true;
     console.log(score);
   }
   else{
-    if(added1)
+    if(added5){
+    ques5=0;
     score=score-1;
-    added5=false;
+    added5=false;}
     console.log(score);
   }
     var ele = document.getElementById("q5");
@@ -170,15 +177,17 @@ for(var i=0;i<t6.length;i++)
 }
 function q6(e)
 {
-  if($(this).html()=="Both of the above"){
+  if($(this).html()=="1,2 and 4"){
+    ques6=1;
     score=score+1;
-    added1=true;
+    added6=true;
     console.log(score);
   }
   else{
-    if(added1)
+    if(added6){
+    ques6=0;
     score=score-1;
-    added1=false;
+    added6=false;}
     console.log(score);
   }
     var ele = document.getElementById("q6");
@@ -199,15 +208,17 @@ for(var i=0;i<t7.length;i++)
 }
 function q7(e)
 {
-  if($(this).html()=="Both of the above"){
+  if($(this).html()=="Imputation with Expectation Maximization algorithm"){
+    ques7=1;
     score=score+1;
-    added1=true;
+    added7=true;
     console.log(score);
   }
   else{
-    if(added1)
+    if(added7){
+    ques7=0;
     score=score-1;
-    added1=false;
+    added7=false;}
     console.log(score);
   }
     var ele = document.getElementById("q7");
@@ -228,15 +239,17 @@ for(var i=0;i<t8.length;i++)
 }
 function q8(e)
 {
-  if($(this).html()=="Both of the above"){
+  if($(this).html()=="10"){
+    ques8=1;
     score=score+1;
-    added1=true;
+    added8=true;
     console.log(score);
   }
   else{
-    if(added1)
+    if(added8){
+    ques8=0;
     score=score-1;
-    added1=false;
+    added8=false;}
     console.log(score);
   }
     var ele = document.getElementById("q8");
@@ -257,15 +270,17 @@ for(var i=0;i<t9.length;i++)
 }
 function q9(e)
 {
-  if($(this).html()=="Both of the above"){
+  if($(this).html()=="1 only"){
+    ques9=1;
     score=score+1;
-    added1=true;
+    added9=true;
     console.log(score);
   }
   else{
-    if(added1)
+    if(added9){
+    ques9=0;
     score=score-1;
-    added1=false;
+    added9=false;}
     console.log(score);
   }
     var ele = document.getElementById("q9");
@@ -286,15 +301,17 @@ for(var i=0;i<t10.length;i++)
 }
 function q10(e)
 {
-  if($(this).html()=="Both of the above"){
+  if($(this).html()=="In distance calculation it will give the same weights for all features"){
+    ques10=1;
     score=score+1;
-    added1=true;
+    added10=true;
     console.log(score);
   }
   else{
-    if(added1)
+    if(added10){
+    ques10=0;
     score=score-1;
-    added1=false;
+    added10=false;}
     console.log(score);
   }
     var ele = document.getElementById("q10");
@@ -306,6 +323,9 @@ function q10(e)
     }
     this.style.background = "rgb(154, 181, 231)";
 }
+
+
+
 
 $('#submit_button').on('click',function(e){
   e.preventDefault();
@@ -334,60 +354,63 @@ $('#submit_button').on('click',function(e){
 
                   // For question 1
                   if(ques1==1)
-                    document.getElementById("q1").style.background = "rgb(0, 255, 0)";
+                  document.getElementById("q1").style.background = "rgb(0, 255, 0)";
                   else
-                    document.getElementById("q1").style.background = "rgb(255, 0, 0)";
+                  document.getElementById("q1").style.background = "rgb(255, 0, 0)";
 
                   // For question 2
-                  if(ques1==1)
-                    document.getElementById("q2").style.background = "rgb(0, 255, 0)";
+                  if(ques2==1)
+                  document.getElementById("q2").style.background = "rgb(0, 255, 0)";
                   else
-                    document.getElementById("q2").style.background = "rgb(255, 0, 0)";
+                  document.getElementById("q2").style.background = "rgb(255, 0, 0)";
 
-                  if(ques1==1)
-                    document.getElementById("q1").style.background = "rgb(0, 255, 0)";
+                  if(ques3==1)
+                  document.getElementById("q3").style.background = "rgb(0, 255, 0)";
                   else
-                    document.getElementById("q1").style.background = "rgb(255, 0, 0)";
+                  document.getElementById("q3").style.background = "rgb(255, 0, 0)";
 
-                  if(ques1==1)
-                    document.getElementById("q1").style.background = "rgb(0, 255, 0)";
+                  if(ques4==1)
+                  document.getElementById("q4").style.background = "rgb(0, 255, 0)";
                   else
-                    document.getElementById("q1").style.background = "rgb(255, 0, 0)";
+                  document.getElementById("q4").style.background = "rgb(255, 0, 0)";
 
 
-                    if(ques1==1)
-                      document.getElementById("q1").style.background = "rgb(0, 255, 0)";
-                    else
-                      document.getElementById("q1").style.background = "rgb(255, 0, 0)";
+                  if(ques5==1)
+                  document.getElementById("q5").style.background = "rgb(0, 255, 0)";
+                  else
+                  document.getElementById("q5").style.background = "rgb(255, 0, 0)";
 
-                      if(ques1==1)
-                        document.getElementById("q1").style.background = "rgb(0, 255, 0)";
-                      else
-                        document.getElementById("q1").style.background = "rgb(255, 0, 0)";
-
-
-                        if(ques1==1)
-                          document.getElementById("q1").style.background = "rgb(0, 255, 0)";
-                        else
-                          document.getElementById("q1").style.background = "rgb(255, 0, 0)";
+                  if(ques6==1)
+                  document.getElementById("q6").style.background = "rgb(0, 255, 0)";
+                  else
+                  document.getElementById("q6").style.background = "rgb(255, 0, 0)";
 
 
-                          if(ques1==1)
-                            document.getElementById("q1").style.background = "rgb(0, 255, 0)";
-                          else
-                            document.getElementById("q1").style.background = "rgb(255, 0, 0)";
+                  if(ques7==1)
+                  document.getElementById("q7").style.background = "rgb(0, 255, 0)";
+                  else
+                  document.getElementById("q7").style.background = "rgb(255, 0, 0)";
 
 
-                            if(ques1==1)
-                              document.getElementById("q1").style.background = "rgb(0, 255, 0)";
-                            else
-                              document.getElementById("q1").style.background = "rgb(255, 0, 0)";
+                  if(ques8==1)
+                  document.getElementById("q8").style.background = "rgb(0, 255, 0)";
+                  else
+                  document.getElementById("q8").style.background = "rgb(255, 0, 0)";
 
 
-                              if(ques1==1)
-                                document.getElementById("q1").style.background = "rgb(0, 255, 0)";
-                              else
-                                document.getElementById("q1").style.background = "rgb(255, 0, 0)";
+                  if(ques9==1)
+                  document.getElementById("q9").style.background = "rgb(0, 255, 0)";
+                  else
+                  document.getElementById("q9").style.background = "rgb(255, 0, 0)";
+
+
+                  if(ques10==1)
+                  document.getElementById("q10").style.background = "rgb(0, 255, 0)";
+                  else
+                  document.getElementById("q10").style.background = "rgb(255, 0, 0)";
+
+                  $('#submit_button').hide();
+                  $('#scoretotal').html(score+'/10');
 
 
             }

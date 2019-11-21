@@ -4,14 +4,14 @@ $name = $_SESSION['name']??"guest";
 
 
   include("config/db_connect.php");
-  $quiz1scorevalue = rand(1,10)??8;
-  $sql = "UPDATE allentries SET quiz1score='$quiz1scorevalue' WHERE name='$name'";
-  if(mysqli_query($conn, $sql)){
-    // echo "Hey $name! You have signed up successfully!";
-  }
-  else{
-    echo "Please try again!". mysqli_error($conn);
-  }
+  // $quiz1scorevalue = rand(1,10)??8; No more random!
+  // $sql = "UPDATE allentries SET quiz1score='$quiz1scorevalue' WHERE name='$name'";
+  // if(mysqli_query($conn, $sql)){
+  //   // echo "Hey $name! You have signed up successfully!";
+  // }
+  // else{
+  //   echo "Please try again!". mysqli_error($conn);
+  // }
 
   $sql = "SELECT name, quiz1score, quiz2score FROM allentries ORDER BY quiz1score+quiz2score DESC";
   // Dont make syntax errors in sql query, e.g. adding extra comma, double quotes etc.
@@ -29,7 +29,6 @@ $name = $_SESSION['name']??"guest";
         <div class="col--md--6">
           <div id="chartContainer" style="margin: 30px;float:left; height: 350px; width: 350px;"></div>
         </div>
-        <h3><?php if(isset($_SESSION['name'])){echo 'You scored: '.$quiz1scorevalue;} ?></h3>
         <div class="col--md--6">
           <div id="table" style="margin: 70px 30px 0px 280px; float: right">
               <table class="roundedTable" style="align-items: center;">
@@ -78,11 +77,11 @@ $name = $_SESSION['name']??"guest";
               yValueFormatString: "#,##0.0#"%"",
               dataPoints:
               [
-                { label: "Ashley", y: 9 },
-                { label: "Flynn", y: 17 },
+                { label: "<?php echo $students[2]['name'];  ?>", y: <?php echo $students[2]['quiz1score']+$students[2]['quiz2score']; ?> },
+                { label: "<?php echo $students[1]['name'];  ?>", y: <?php echo $students[1]['quiz1score']+$students[1]['quiz2score']; ?> },
                 { label: "<?php echo $students[0]['name'];  ?>", y: <?php echo $students[0]['quiz1score']+$students[0]['quiz2score']; ?> },
-                { label: "Walker", y: 12 },
-                { label: "Justin", y: 3 }
+                { label: "<?php echo $students[3]['name'];  ?>", y: <?php echo $students[3]['quiz1score']+$students[3]['quiz2score']; ?> },
+                { label: "<?php echo $students[4]['name'];  ?>", y: <?php echo $students[4]['quiz1score']+$students[4]['quiz2score']; ?> }
 
               ]
             }]

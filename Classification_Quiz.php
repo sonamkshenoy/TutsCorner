@@ -19,8 +19,6 @@ if(isset($_POST['score'])){
    echo $_POST['score'];
 }
 
-
-
 ?>
 
 <!DOCTYPE html>
