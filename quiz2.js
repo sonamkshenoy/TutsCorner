@@ -339,7 +339,7 @@ $('#submit_button').on('click',function(e){
                     document.getElementById("q1").style.background = "rgb(255, 0, 0)";
 
                   // For question 2
-                  if(ques2==1)
+                  if(ques1==1)
                     document.getElementById("q2").style.background = "rgb(0, 255, 0)";
                   else
                     document.getElementById("q2").style.background = "rgb(255, 0, 0)";
@@ -388,9 +388,6 @@ $('#submit_button').on('click',function(e){
                                 document.getElementById("q1").style.background = "rgb(0, 255, 0)";
                               else
                                 document.getElementById("q1").style.background = "rgb(255, 0, 0)";
-
-                  $('#submit_button').hide();
-                  $('#scoretotal').html(score+'/10');
 
 
             }

@@ -1,6 +1,6 @@
 <?php
 
-    if(!isset($_SESSION)) 
+    if(!isset($_SESSION))
     {
         session_start();
     }
@@ -92,17 +92,14 @@ if(isset($_POST['signup'])){
             		<div class="info">
             			<div class="top">
             				<form action="#" method="post">
-                      <input class="text" type="text" name="name" placeholder="Your Full Name" required=""><br>
-            					<input class="text" type="text" name="Username" placeholder="Username" required="">
+                      <input class="text" type="text" name="name" placeholder="Your Full Name" required="">
             					<input class="text email" type="email" name="email" placeholder="Email" required="">
             					<input class="text" type="password" name="password" placeholder="Password" required="">
-            					<input class="text pass" type="password" name="password" placeholder="Confirm Password" required="">
-                      <input class="text email" type="number" name="age" placeholder="Age" required="">
             					<div class="wthree-text">
-            						<label class="anim">
+            						<!-- <label class="anim">
             							<input type="checkbox" class="checkbox" required="">
             							<span>I Agree To The Terms & Conditions</span>
-            						</label>
+            						</label> -->
             						<div class="clear"> </div>
             					</div>
             					<input type="submit" name='signup' value="SIGNUP">

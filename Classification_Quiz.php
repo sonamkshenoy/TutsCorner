@@ -235,15 +235,15 @@ if(isset($_POST['score'])){
         <!-- <form class="" action="index.html" method="post">
           <input id="score" type="text" name="" value="">
         </form> -->
-          <a href="/tutscorner/Scoreboard.php"><div style="padding-left: 380px; margin-bottom: 40px;"> <button id="submit_button">Submit</button></div></a>
+          <button style="padding-left: 20px; margin-left: 380px; margin-bottom: 40px;" class='option' id="submit_button">Submit</button>
 
         <!-- </form> -->
 
   <!-- </form> -->
-  <div class="scorenow" style = "text-align:center; display:none;">
+  <!-- <div class="scorenow" style = "text-align:center; display:none;">
     <h2>You scored <span id='scorehere'></span> </h2>
 
-  </div>
+  </div> -->
 
 
     <!-- Side Scoreboard -->
@@ -256,7 +256,7 @@ if(isset($_POST['score'])){
             </tr>
             <tr>
                 <td></td>
-                <td id='score' style="font-size:20px;padding: 0px 0px 20px 20px; font-size: 25px; color: cornflowerblue">0/10</td>
+                <td id='scoretotal' style="font-size:20px;padding: 0px 0px 20px 20px; font-size: 25px; color: cornflowerblue">0/10</td>
                 <td></td>
             </tr>
             <tr>

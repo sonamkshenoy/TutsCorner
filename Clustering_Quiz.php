@@ -200,9 +200,7 @@
                     </tr>
 
         </table>
-        <div style="padding-left: 380px; margin-bottom: 40px;"> <button class="submit_button"> Submit </button>
-
-    </div>
+        <button style="padding-left: 380px; margin-bottom: 40px;" id="submit_button"> </button>
 
     <!-- Side Scoreboard -->
     <div class="fixit" style=" float: right; align-items: center; margin-top: 40px; position: fixed">
@@ -239,6 +237,6 @@
         </table>
     </div>    </div>
 </div>
-    <script src="quiz.js"></script>
+    <script src="quiz2.js"></script>
 </body>
 </html>
