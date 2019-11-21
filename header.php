@@ -1,6 +1,15 @@
 <?php
-  session_start();
+  if(!isset($_SESSION)) 
+    {
+        session_start();
+    }
+
   $name = $_SESSION['name']??"guest";
+
+  if(isset($_POST['logout'])){
+   unset($_SESSION['name']);
+   echo 'success';
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,9 +60,12 @@
       <a href="classification.php">Classification</a>
       <a href="clustering.php">Clustering</a>
 
-      <a href="#" class="right">Hey <?php echo $name; ?>!</a>
-      <a href="login.php" class="right">Login</a>
-      <a href="aboutPage.php" class="right">About</a>
+      <a href="#" id='welcomeperson' class="right">Hey <?php echo $name; ?>!</a>
+      <?php if(isset($_SESSION['name'])){echo '<a id="logoutbutton" href="" class="right">Logout</a>';} ?>
+      <!-- <a href="" class="right">Logout</a> -->
+      <?php if(!isset($_SESSION['name'])){
+      echo '<a href="login.php" class="right nologin">Login</a>';} ?>
+      '<a href="aboutPage.php" class="right">About</a>'
     </div>
 
     <div class="header"  style="background-image:url('images/education.jpg');">
@@ -62,3 +74,23 @@
         <h3>Just the right place to get started for Machine Learning!</h3>
       </div>
     </div>
+
+<script type="text/javascript">
+  $('#logoutbutton').on('click',function(e){
+    e.preventDefault();
+    $.ajax({
+      type:"POST",
+      url:'/tutscorner/index.php',
+      data:{logout:'logout'},
+      success: function(data){
+        console.log('Logout successful');
+        $('#welcomeperson').hide();
+        $('.nologin').show();
+        $('#logoutbutton').hide();
+        window.location.href = "/tutscorner/";
+
+      }
+    });
+
+  });
+</script>
