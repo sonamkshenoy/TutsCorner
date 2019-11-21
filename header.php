@@ -1,5 +1,5 @@
 <?php
-  if(!isset($_SESSION)) 
+  if(!isset($_SESSION))
     {
         session_start();
     }
@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>TutsCorner</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
