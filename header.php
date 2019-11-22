@@ -49,7 +49,7 @@
 
 </head>
 <body>
-
+  <!-- <div class="container"> -->
 
     <div id="navbar" class="navbar" style="margin-bottom:0px;">
       <a id='navbarNavAltMarkup' href="index.php">Home</a>
@@ -74,6 +74,7 @@
         <h3>Just the right place to get started for Machine Learning!</h3>
       </div>
     </div>
+  <!-- </div> -->
 
 <script type="text/javascript">
   $('#logoutbutton').on('click',function(e){

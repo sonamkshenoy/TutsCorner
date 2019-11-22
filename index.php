@@ -6,23 +6,23 @@
         <div class="row">
 
           <div class="col-lg-9">
-            <div class="quiz slideanim">
-              <img style="float: left;" src="images/quiz.jpg" alt="">
+            <div class="quiz slideanim indexpageresponsive">
+              <img class="indexpageresponsive" style="float: left;" src="images/quiz.jpg" alt="">
               <h2 class="text-center">Quizzes</h2>
               <p>Test your knowledge with the most practical questions to see how much you have actually learnt! Quizzes can be taken for every two topics. Based on the scores of the student, a scoreboard is prepared as an initiative for them to try higher! This motivates them to try harder, which thus accomplishes the aim of TutsCorner! </p>
             </div>
 
-            <div class="container-fluid bg-grey" style="padding-bottom:0px;">
+            <div class="container-fluid middleimage bg-grey indexpageresponsive" style="padding-bottom:0px;">
               <div class="theory slideanim">
-                <img style="float: right;" src="images/theory.jpg" alt="">
+                <img class="indexpageresponsive noright" src="images/theory.jpg" alt="">
                 <h2 class="text-center">Theory</h2>
                 <p>Here's where you are going to learn the most exciting things in the world. We make sure you enjoy your experience by interactive checkpoint sessions! In depth knowledge is provided so that the you can understand how each concept is interrelated.Here's where you are going to learn the most exciting things in the world. We make sure you enjoy your experience by interactive checkpoint sessions! </p>
               </div>
             </div>
 
 
-            <div class="theory slideanim border border-dark">
-              <img style="float: left;" src="images/theory.jpg" alt="">
+            <div class="theory slideanim indexpageresponsive border border-dark">
+              <img class="indexpageresponsive" style="float: left;" src="images/theory.jpg" alt="">
               <h2 class="text-center">Scoreboard</h2>
               <p>Want to compete with others! Get live information of yours and others score. An essential feature of TutsCorner, we make sure users have enough motivation to learn machine learning! Competitiveness is no doubt a necessity for one to learn! Hence our scoreboard which is updated from time to time makes sure everyone gets a chance to compete and be at the top of the scoreboard! Scores are given on the basis of the quizzes taken by the user.</p>
             </div>

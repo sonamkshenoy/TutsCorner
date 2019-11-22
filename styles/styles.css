@@ -1,3 +1,34 @@
+/* Added from here */
+
+@media only screen and (max-width: 600px){
+  .sticky{
+    position: relative;
+  }
+
+  .indexpageresponsive{
+    max-width: 300px;
+  }
+
+  img.indexpageresponsive{
+    margin:0px;
+  }
+
+  img.indexpageresponsive.noright{
+    float: none;
+  }
+
+  .container-fluid.middleimage{
+    padding: 0px;
+  }
+}
+
+
+img.indexpageresponsive.noright{
+  float: right;
+}
+
+/* Added till here */
+
 marquee{
   height: 350px;
 }
