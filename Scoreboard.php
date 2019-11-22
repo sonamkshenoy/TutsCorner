@@ -1,9 +1,7 @@
 <?php include("header.php");
 // session_start();
 $name = $_SESSION['name']??"guest";
-
-
-  include("config/db_connect.php");
+include("config/db_connect.php");
   // $quiz1scorevalue = rand(1,10)??8; No more random!
   // $sql = "UPDATE allentries SET quiz1score='$quiz1scorevalue' WHERE name='$name'";
   // if(mysqli_query($conn, $sql)){
