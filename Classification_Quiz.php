@@ -42,6 +42,8 @@ if(isset($_POST['score'])){
 
   <div class="header" style="padding: 40px; margin-bottom: 20px; text-align:center; background:#48464d; color:white">
 
+    <a href="/tutscorner/Scoreboard.php"><button style="text-align:center;" class='option'>Go to scoreboard</button>  </a>
+
         <h1 style="font-size: 40px">Classification</h1>
         <!-- <p>Just the right place to get started for Machine Learning!</p> -->
         <!-- <br> -->

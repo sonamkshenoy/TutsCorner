@@ -28,7 +28,7 @@ include("config/db_connect.php");
           <div id="chartContainer" style="margin: 30px;float:left; height: 350px; width: 350px;"></div>
         </div>
         <div class="col--md--6">
-          <div id="table" style="margin: 70px 30px 0px 280px; float: right">
+          <div id="table" class='tableresponsive'>
               <table class="roundedTable" style="align-items: center;">
                 <tr>
                   <th> Rank </th>

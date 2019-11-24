@@ -1,4 +1,12 @@
 /* Added from here */
+.tableresponsive{
+  float: right;
+  margin: 70px 30px 0px 280px;;
+}
+/* 
+.canvasjs-chart-canvas{
+width: 350px;
+} */
 
 @media only screen and (max-width: 600px){
   .sticky{
@@ -20,7 +28,17 @@
   .container-fluid.middleimage{
     padding: 0px;
   }
+
+  .tableresponsive{
+    float: left;
+    margin-left: 10px;
+  }
+
+  .canvasjs-chart-canvas{
+    width:250px;
+  }
 }
+
 
 
 img.indexpageresponsive.noright{

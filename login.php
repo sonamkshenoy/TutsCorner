@@ -27,11 +27,14 @@ if(isset($_POST['login'])){
         header("Location: /TutsCorner/");
       }
     else{
-      echo 'Login unsuccessful. Please enter correct credentials';
+      // echo 'Login unsuccessful. Please enter correct credentials';
+          echo "<script type='text/javascript'>alert('Please enter correct credentials! Login unsuccessful.');</script>";
     }
   }
   else
-  echo 'Login unsuccessful. Please enter correct credentials';
+  // echo 'Login unsuccessful. Please enter correct credentials';
+  echo "<script type='text/javascript'>alert('Please enter correct credentials! Login unsuccessful.');</script>";
+
 }
 
 include("header.php");

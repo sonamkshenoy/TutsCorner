@@ -1,27 +1,4 @@
 <?php include('header.php') ?>
-<style>
-/* <!-- To add --> */
-#knn {
-		  display: flex;
-		  flex-direction: column;
-		  align-items: center;
-		  font-family: Helvetica;
-		  background-color: white;
-		  color: black;
-}
-.d3ml__settings {
-		  display: flex;
-		  justify-content: space-around;
-}
-.d3ml__settings__group:first-of-type {
-		  display: flex;
-		  flex-direction: column;
-}
-</style>
-
-
-
-<script src="https://rawgit.com/StefanieStoppel/d3ML/master/lib/d3ml.min.js"></script>
 
 <!-- Container (Section) -->
 <div id="about" class="container-fluid">
@@ -40,33 +17,6 @@
 <div class="container-fluid bg-grey">
   <div class="row">
       <h4><strong>IMPORTANCE:</strong> <p>Clustering is similar to classification, but the basis is different. In Clustering you don’t know what you are looking for, and you are trying to identify some segments or clusters in your data. When you use clustering algorithms on your dataset, unexpected things can suddenly pop up like structures, clusters and groupings you would have never thought of otherwise.</p></h4><br>
-  </div>
-</div>
-
-
-<div class="container-fluid bg-grey">
-  <div class="row">
-		<h4> In the visualization you can see how the <strong>k-nearest neighbor (KNN)</strong> algorithm
-		<strong>classifies</strong> new data points based on their <strong>k</strong> nearest neighbors, where the amount of neighbors k is specified using the slider above. The new point will be assigned the <strong>class</strong> that the majority of its k nearest neighbors hold.
-		</h4>
-		<h4>Click on the grey area to create new circles and see how their color changes based on their neighbors.</h4>
-		<div id="knn"></div>
-		<h4>The initial circles are our "training" data set. The data set is divided into two classes: <strong>red and blue</strong>.
-		  When we add a new circle, we want to find out which class (aka color) we need to assign it to, depending on its neighbors.
-		  <br><br>
-		  What's going on behind the scenes after you add a circle:
-		</p>
-		<ol>
-		  <li>The algorithm goes through all other circles and calculates their distance from your new circle.</li>
-		  <li>It then sorts them by distance from your circle in ascending order, meaning the circles with the smallest distances to the new circle come first.</li>
-		  <li>It picks the first k entries from the result of step 2.</li>
-		  <li>It looks at the k nearest neighbors' classes. If the majority of them are blue, our new point will be blue as well. If most of them are red, then the new point will be red.</li>
-		</ol>
-		<h3>The weighted KNN:</h3></h4>
-		<h4>If you check the <strong>"Weighted" checkbox</strong> above, the algorithm is justified, so that the <strong>inverse of the distance</strong> of the k neighbors is taken into account. This is important during "ties", meaning that you chose an even amount of neighbors k and half of them are class red while the other half are blue.
-		  If you don't use the weighted version of KNN in this case, the neighbor with the closest distance will <strong>ALWAYS</strong> win, so that your circle will take on its color.
-		</h4>
-
   </div>
 </div>
 
@@ -349,7 +299,7 @@
         <div class="panel-footer">
           <h3>Evaluate</h3>
           <h4>Understand how well you know your concepts</h4>
-          <?php if(isset($_SESSION['name'])){echo '<button class="btn btn-lg"><a href="Classification_Quiz.php">Take quiz!</a></button>';}
+          <?php if(isset($_SESSION['name'])){echo '<button class="btn btn-lg"><a href="Clustering_Quiz.php">Take quiz!</a></button>';}
           else{echo "<button class='btn btn-lg'>Please ".'<a href="/tutscorner/login.php">'.'login'.'</a>'." to take the quiz.</button>";} ?>
         </div>
       </div>
@@ -397,71 +347,21 @@ $(document).ready(function(){
     if (this.hash !== "") {
       // Prevent default anchor click behavior
       event.preventDefault();
+
       // Store hash
       var hash = this.hash;
+
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   });
-
-
-		const displayWidth = window.innerWidth - 25;
-		const displayHeight = 450;
-		const dataSetSize = 250;
-		const options = {
-		  rootNode: '#knn',
-		  width: displayWidth,
-		  height: displayHeight,
-		  backgroundColor: '#0f3c3d',
-		  cirlceFill: 'white',
-		  circleStroke: 'white'
-		};
-		const types = ['A', 'B'];
-		function getRandomInt(min, max) {
-			return Math.floor(Math.random() * (max - min + 1)) + min;
-		}
-		function createRandomEllipsoidCoordinates(width, height, cx, cy) {
-		  const rho = Math.sqrt(Math.random())
-		  const phi = Math.random() * Math.PI * 2
-		  const rands = {x: getRandomInt(-width/2,width/2), y: getRandomInt(-height/2,height/2)}
-		  const x = (rho * Math.cos(phi) * width/2) + cx + rands.x
-		  const y = (rho * Math.sin(phi) * height/2) + cy + rands.y
-		  return {x, y}
-		}
-		function createRandomData() {
-		  const ellipsoidOptions = {
-			'A': {
-			  width: displayWidth/3,
-			  height: displayWidth/3,
-			  cx: displayWidth/3,
-			  cy: displayHeight/3
-			},
-			'B': {
-			   width: displayWidth/2.5,
-			   height: displayWidth/2.5,
-			   cx: displayWidth*0.663,
-			   cy: displayHeight*0.66
-			}
-		  };
-		  return Array.apply(null, Array(dataSetSize))
-			.map(d => {
-			  const type = Math.random() > 0.5 ? types[0] : types[1];
-			  const {width, height, cx, cy} = ellipsoidOptions[type]
-			  const {x, y} = createRandomEllipsoidCoordinates(width, height, cx, cy);
-			  return {x, y, type};
-			}
-		  );
-		}
-		const data = createRandomData();
-		const k = 3;
-		const vis = new d3ml.KNNVisualization(data, options, types, k);
-		vis.draw();
-  });
-
 </script>
+
+  <?php include('footer.php') ?>

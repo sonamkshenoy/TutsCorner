@@ -1,24 +1,5 @@
 <?php include('header.php') ?>
 
-<style>
-/* <!-- To add --> */
-tr, th {
-	  width: 4rem;
-	  height: 3rem;
-	  border: 1px solid black;
-	  text: large;
-	  text-align: center;
-	}
-	th {
-	  text-align: center;
-	  background: #d0d0d0;
-	  border-color: black;
-	}
-/* <!-- To add --> */
-</style>
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
 <!-- Container (Section) -->
 <div id="about" class="container-fluid">
   <div class="row">
@@ -32,34 +13,13 @@ tr, th {
     </div>
   </div>
 </div>
+
 <div class="container-fluid bg-grey">
   <div class="row">
       <h4><strong>IMPORTANCE:</strong> <p>Regression models (both linear and non-linear) are used for predicting a real value, like salary for example. If your independent variable is time, then you are forecasting future values, otherwise your model is predicting present but unknown values. Regression technique vary from Linear Regression to SVR and Random Forests Regression.</p></h4><br>
   </div>
 </div>
-<div id="about" class="container-fluid">
-<div class="row">
-    <div class="col-sm-8">
-	<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-		  <h4>In the visualization, you can see how linear regression models the relationship between a scalar response(X - dependent variable) and an explanatory variable(Y - independent variable). You can change the values for X and Y to view the changes for the regression.</h4>
-		  <h4>Here are the values for the regressed line and the statistical values for the mean/average and standard deviation:</h4>
-		<div id="y">:)</div>
-	</div>
-		<br><br><h4>Click the table to edit the numbers for the X and Y variables:</h4>
-	</div>
-		  <!-- <button onClick="runGraph()">Finish Editing</button><br><br> -->
-		  <button onClick="runGraph()" class="btn btn-xs">Finish Editing</button><br><br>
 
-		<table id="datatable">
-		  <tr>
-			<th>x</th>
-			<th>y</th>
-		  </tr>
-		</table>
-	<!-- </div> -->
-<!-- </div> -->
-</div>
-<!-- To add -->
 <div id="about" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
@@ -90,6 +50,7 @@ tr, th {
 	<p>import numpy as np</p>
   </div>
 </div>
+
 <div id="about" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
@@ -112,6 +73,7 @@ tr, th {
     </div>
   </div>
 </div>
+
 <div id="about" class="container-fluid">
     <div class="row">
     <div class="col-sm-8">
@@ -140,6 +102,7 @@ tr, th {
     </div>
   </div>
 </div>
+
 <div class="container-fluid bg-grey">
   <div class="row">
     <p>def estimate_coefficients(x, y):</p></br>
@@ -152,6 +115,7 @@ tr, th {
 	<p>return(b_0, b_1)</p>
   </div>
 </div>
+
 <div id="about" class="container-fluid">
     <div class="row">
     <div class="col-sm-8">
@@ -189,6 +153,7 @@ tr, th {
     </div>
   </div>
 </div>
+
 <div class="container-fluid bg-grey">
   <div class="row">
     <p>def plot_regression_line(x, y, b):</p></br>
@@ -200,6 +165,7 @@ tr, th {
 	<p>plt.show()</p>
   </div>
 </div>
+
 <div id="about" class="container-fluid">
     <div class="row">
     <div class="col-sm-8">
@@ -219,6 +185,7 @@ tr, th {
     </div>
   </div>
 </div>
+
 <div class="container-fluid bg-grey">
   <div class="row">
     <p>def main():</p></br>
@@ -228,10 +195,11 @@ tr, th {
 	<p>print("Estimate coefficients:\nb=0 = {} \nn_b1 = {}".format(b[0], b[1]))</p>
 	<p>plot_regression_line(x, y, b)</p>
 	</br></br></br>
-	<p>if _name_ == "_main_":</p></br>
+	<p>if __name__ == "__main__":</p></br>
 	<p>main()</p>
   </div>
 </div>
+
 <!-- Container (Section) -->
 <div id="services" class="container-fluid text-center">
   <h2>IN DEPTH</h2>
@@ -273,6 +241,7 @@ tr, th {
     </div>
   </div>
 </div>
+
 <!-- Container (Section) -->
 <div id="pricing" class="container-fluid">
   <div class="text-center">
@@ -301,7 +270,7 @@ tr, th {
           <h3>Evaluate</h3>
           <h4>Understand how well you know your concepts</h4>
           <?php if(isset($_SESSION['name'])){echo '<button class="btn btn-lg"><a href="Classification_Quiz.php">Take quiz!</a></button>';}
-          else{echo "Please ".'<a href="/login.php">'.'login'.'</a>'." to take the quiz.";} ?>
+          else{echo "<button class='btn btn-lg'>Please ".'<a href="/tutscorner/login.php">'.'login'.'</a>'." to take the quiz.</button>";} ?>
         </div>
       </div>
     </div>
@@ -319,6 +288,10 @@ tr, th {
     </div>
   </div>
 </div>
+
+
+
+
 <script type="text/javascript">
   $("#question1").on('click', function(e){
     e.preventDefault();
@@ -336,6 +309,8 @@ tr, th {
     }
   })
 </script>
+
+
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
@@ -344,221 +319,22 @@ $(document).ready(function(){
     if (this.hash !== "") {
       // Prevent default anchor click behavior
       event.preventDefault();
+
       // Store hash
       var hash = this.hash;
+
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   });
-});
-<!-- To add -->
-var randomArray = [];
-function getRandomVariable() {
-  var number = 1 + Math.floor(Math.random() * 1000);
-  return number;
-}
-function createRandomArray(numOfElements) {
-  for (var i = 0; i < numOfElements; i++) {
-    var arrayOfThisRow = [];
-    arrayOfThisRow.push(getRandomVariable());
-    arrayOfThisRow.push(getRandomVariable());
-    randomArray.push(arrayOfThisRow);
-  }
-  randomArray.sort(Comparator);
-}
-function Comparator(a,b){
-  if (a[0] < b[0]) return -1;
-  if (a[0] > b[0]) return 1;
-  return 0;
-}
-createRandomArray(20);
-for (var p = 0; p < randomArray.length; p++) {
-	$("#datatable").append("<tr><td><div contenteditable='true' id='editNum'>" + randomArray[p][0] + "</div></td><td><div contenteditable='true' id='editNum'>" + randomArray[p][1] + "</div></td></tr>");
-}
-var real = [];
-var x = [];
-var y = [];
-var xySum = 0;
-var xSquaredSum = 0;
-var xAverage = 0;
-var yAverage = 0;
-var b2 = 0;
-var b1 = 0;
-var stdArray = [];
-var std = 0;
-var predicted = [];
-function initialise() {
-  real = [];
-	x = [];
-  y = [];
-  xySum = 0;
-  xAverage = 0;
-  yAverage = 0;
-  b2 = 0;
-  b1 = 0;
-  stdArray = [];
-  std = 0;
-  predicted = [];
-  xSquaredSum = 0;
-}
-function getValues() {
-  $("table#datatable tr").each(function() {
-    var arrayOfThisRow = [];
-    var tableData = $(this).find('td');
-    if (tableData.length > 0) {
-        tableData.each(function() {
-          hi = parseInt($(this).text());
-          arrayOfThisRow.push(hi);});
-        real.push(arrayOfThisRow);
-    }
-  });
-  for (var i = 0; i < real.length; i++) {
-    x.push(real[i][0]);
-    y.push(real[i][1]);
-  }
-}
-// put into [[x, y][x, y]] format
-function formatValues() {
-  for (var i = 0; i < x.length; i++) {
-  real[i] = [];
-    for (var k = 0; k < 1; k++) {
-      real[i].push(x[i]);
-      real[i].push(y[i]);
-    }
-  }
-}
-// gets sum of X*Y
-function getXY() {
-  for (var l = 0; l < x.length; l++) {
-    for (var m = 0; m < 1; m++) {
-      xySum += real[l][m] * real[l][m+1];
-    }
-  }
-}
-// gets sum of x^2
-function getXSquared() {
-  for (var l = 0; l < x.length; l++) {
-    for (var m = 0; m < 1; m++) {
-      xSquaredSum += Math.pow(real[l][m], 2);
-    }
-  }
-}
-// gets average of x and y
-function getAverages() {
-  var totalx = 0;
-  var totaly = 0;
-  for (var i = 0; i < x.length; i++) {
-    totalx += x[i];
-    totaly += y[i];
-  }
-  xAverage = totalx/x.length;
-  yAverage = totaly/x.length;
-}
-//b2 = [xySum - (count*xAverage*yAverage)]/[X^2sum - (count*xAverage^2)]
-function getB2() {
-  b2 = (xySum - (x.length*xAverage*yAverage)) / (xSquaredSum - (x.length * Math.pow(xAverage, 2)));
-}
-function getB1() {
-  b1 = yAverage - xAverage * b2;
-}
-// Get predicted linear x y coords
-function calculateYHat() {
-  for (var i = 0; i < x.length; i++) {
-    predicted[i] = [];
-    for (var k = 0; k < 1; k++) {
-      predicted[i].push(x[i]);
-      predicted[i].push(b1+b2*x[i]);
-    }
-  }
-}
-// Get standard deviation
-function getStd() {
-  for (var i = 0; i < x.length; i++) {
-    stdArray.push(Math.pow(x[i]-xAverage, 2));
-    std += stdArray[i];
-  }
-  std /= x.length;
-  std = Math.sqrt(std);
-}
-function compareNumbers(a, b) {
-  return a[0] - b[0];
-}
-function updateText() {
-	document.getElementById("y").innerHTML = ("Predicted = " + b1.toFixed(2) + " + " + b2.toFixed(2) + " * x<br>Average = " + yAverage.toFixed(2)) + "<br>Standard Deviation = " + std.toFixed(2);
-};
-function runGraph () {
-  initialise();
-  getValues();
-  formatValues();
-  getAverages();
-  getXY();
-  getXSquared();
-  getB2();
-  getB1();
-  calculateYHat();
-  getStd();
-  updateText();
-
-  $(function () {
-        $('#container').highcharts({
-            title: {
-                text: 'Simple Linear Regression',
-                x: -20 //center
-            },
-            <!-- subtitle: { -->
-                <!-- text: 'Inconsistencies by Mei', -->
-                <!-- x: -20 -->
-            <!-- }, -->
-            xAxis: {
-                title: {
-                    text: 'X'
-                },
-                plotLines: [{
-                    value: 0,
-                    width: 1,
-                    color: '#808080'
-                }]
-            },
-            yAxis: {
-                title: {
-                    text: 'Y'
-                },
-                plotLines: [{
-                    value: 0,
-                    width: 1,
-                    color: '#808080'
-                }]
-            },
-            tooltip: {
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle',
-                borderWidth: 0
-            },
-            series: [{
-                name: 'Real',
-                data: real,
-				color: '#0f3c3d'
-                }, {
-                name: 'Predicted',
-                data: predicted,
-				color: '#9fb1b1'
-                }]
-        });
-    });
-}
-runGraph();
-document.getElementById("editNum").addEventListener("input", function() {
-    runGraph();
-}, false);
-
-<!-- To add -->
   </script>
+
+
+  <?php include('footer.php') ?>
