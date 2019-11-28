@@ -2,7 +2,6 @@
 // session_start();
 $name = $_SESSION['name']??"guest";
 include("config/db_connect.php");
-  // $quiz1scorevalue = rand(1,10)??8; No more random!
   // $sql = "UPDATE allentries SET quiz1score='$quiz1scorevalue' WHERE name='$name'";
   // if(mysqli_query($conn, $sql)){
   //   // echo "Hey $name! You have signed up successfully!";
@@ -12,7 +11,6 @@ include("config/db_connect.php");
   // }
 
   $sql = "SELECT name, quiz1score, quiz2score FROM allentries ORDER BY quiz1score+quiz2score DESC";
-  // Dont make syntax errors in sql query, e.g. adding extra comma, double quotes etc.
   $result = mysqli_query($conn,$sql);
   $students = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_free_result($result);
