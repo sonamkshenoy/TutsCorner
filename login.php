@@ -20,10 +20,7 @@ if(isset($_POST['login'])){
   if($students){
     if($password == $students[0]['password']){
       // echo 'Login successful! Congrats!';
-      // Givers error : session_start(): Cannot send session cookie - headers already sent by
-       // ANY HTML before things that send headers (like cookies). The <?php tag must be the first thing in the file. Not even whitespace before it.
-       // Add the include php statement of html after setting cookie and the include of config before that since you want to use conn of connection with the DB.
-        $_SESSION['name']=$students[0]['name'];
+          $_SESSION['name']=$students[0]['name'];
         header("Location: /TutsCorner/");
       }
     else{
