@@ -562,3 +562,6 @@ document.getElementById("editNum").addEventListener("input", function() {
 
 <!-- To add -->
   </script>
+
+<?php include('footer.php') ?>
+
